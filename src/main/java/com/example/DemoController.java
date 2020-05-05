@@ -11,20 +11,12 @@ import java.util.Map;
 public class DemoController {
 
     @Value("${test:LOCAL}")
-    protected String vaultBackendKey;
-
-    @Value("${encryption-key:LOCAL}")
-    protected String vaultBackendKvVersion;
-
-    @Value("${test-encryption-key:LOCAL}")
-    protected String vaultBackendName;
+    protected String vaultKey;
 
     @Get("/test")
     Map<String, String> test() {
         Map<String, String> response = new HashMap<>();
-        response.put("vault-backend-key-one", vaultBackendKey);
-        response.put("vault-backend-kv-version", vaultBackendKvVersion);
-        response.put("vault-backend-name", vaultBackendName);
+        response.put("vault-key-test", vaultKey);
         return response;
     }
 
