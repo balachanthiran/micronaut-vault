@@ -8,13 +8,11 @@ and access it:
 
 `docker exec -it vault sh`
 
-Then set up kv secret v1:
+Then set up kv secret:
 
 ```
 export VAULT_ADDR='http://0.0.0.0:8200'
 export VAULT_TOKEN='myroot'
-vault secrets disable secret
-vault secrets enable -version=1 -path=secret kv
 vault kv put secret/application test=testing
 ```
 
