@@ -9,6 +9,7 @@ group "com.example"
 
 
 repositories {
+    mavenLocal()
     jcenter()
 }
 
